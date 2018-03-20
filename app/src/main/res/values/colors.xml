@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3797cf</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#ece3e6</color>
+    <color name="araorange">#ca9657</color>
+    <color name="arablue">#0dc1c4</color>
+    <color name="aragreen4">#42a325</color>
+    <color name="aragreen">#ccff00</color>
+    <color name="aragreen1">#027476</color>
+    <color name="aragreen2">#3e997f</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="editTextBG">#DADADA</color>
+
+    <color name="textColor">#6e6e6e</color>
+    <color name="aragray">#454444</color>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aragreen"
+    tools:context="com.ara.cabservices.MasterScreen">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/aragreen4"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/parentMAster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/group"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/listshape1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="75dp"
+                    android:src="@drawable/paytm"
+                    android:id="@+id/paytm"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_height="75dp" />
+                <ImageView
+                    android:layout_width="75dp"
+                    android:src="@drawable/wallet"
+                    android:layout_marginLeft="80dp"
+                    android:id="@+id/wallet"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@+id/paytm"
+                    android:layout_height="75dp" />
+
+                <LinearLayout
+                    android:id="@+id/loj"
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@id/paytm"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/visa"
+                    android:layout_marginLeft="65dp"
+                    android:id="@+id/visa"/>
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_marginLeft="85dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/mas"
+                    android:id="@+id/mastercard"/>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/loj"
+                    android:layout_width="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/qbe"
+                    android:layout_height="75dp"
+                    android:id="@+id/sodexo"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/a"
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/b"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/listshape"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginRight="55dp"
+                        android:layout_width="30dp"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="75dp"
+                            android:src="@drawable/fdsf"
+                            android:layout_height="75dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/arablue"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:layout_height="wrap_content"
+                            android:text="feedback"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:background="@drawable/listshape"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="45dp"
+                        android:id="@+id/c"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="30dp"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="75dp"
+                            android:src="@drawable/dkjf"
+                            android:layout_height="75dp" />
+                        <TextView
+                            android:gravity="center"
+                            android:textColor="@color/arablue"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Route"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/aragreen2"
+            app:headerLayout="@layout/nav_header"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/nav_items" />
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
