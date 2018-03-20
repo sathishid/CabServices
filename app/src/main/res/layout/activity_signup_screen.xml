@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/aragreen"
+    android:layout_height="match_parent"
+    tools:context="com.ara.cabservices.SignupScreen">
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/aragreen4"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/aragreen"
+            android:id="@+id/linear123"
+            android:layout_marginTop="55dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/signuplogo"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/usercreated" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/signuser"
+                android:padding="10dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/aragray"
+                android:textStyle="bold"
+                android:textColorHint="@color/aragray"
+                android:layout_marginRight="10dp"
+                android:hint="Username"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Phone number"
+                android:id="@+id/signphone"
+                android:textSize="15sp"
+                android:textColorHint="@color/aragray"
+                android:padding="10dp"
+                android:textColor="@color/aragray"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:hint="Password"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:id="@+id/signpass"
+                android:textColor="@color/aragray"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:textColorHint="@color/aragray"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:hint="Conform Password"
+                android:layout_width="match_parent"
+                android:id="@+id/signconpass"
+                android:inputType="textPassword"
+                android:textColorHint="@color/aragray"
+                android:textColor="@color/aragray"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="60dp"
+                android:layout_gravity="center"
+                android:text="create new account"
+                android:padding="6dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="18"
+                android:id="@+id/create"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimaryDark"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+</RelativeLayout>

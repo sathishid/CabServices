@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Spt</string>
+    <string name="title_activity_master_screen">MasterScreen</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
