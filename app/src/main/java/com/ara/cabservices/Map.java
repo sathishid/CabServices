@@ -24,7 +24,7 @@ public class Map extends AppCompatActivity {
     Spinner spinner;
     Toolbar toolbar;
     ImageView route;
-    String[] locations = {"select Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
+    String[] locations = {"select Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Alandur"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class Map extends AppCompatActivity {
                         route.setImageResource(R.drawable.mylapore);
                         break;
                     case 6:
-                        route.setImageResource(R.drawable.leroyal);
+                        route.setImageResource(R.drawable.alandur);
                         break;
                     default:
                         break;

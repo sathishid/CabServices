@@ -58,6 +58,8 @@
         <ImageView
             android:id="@+id/imageRoute"
             android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:layout_width="match_parent"
             android:layout_height="430dp"
             android:layout_below="@+id/l32"/>
