@@ -67,15 +67,18 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <Spinner
+
+            <TextView
                 android:id="@+id/feedpickuploc"
                 android:layout_width="360dp"
+                android:text="Ramanucham IT City"
+                android:gravity="fill"
+                android:padding="7dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2.5"
-                android:background="@color/editTextBG"
-                android:spinnerMode="dropdown">
+                android:background="@color/editTextBG">
 
-            </Spinner>
+            </TextView>
 
             <ImageView
                 android:id="@+id/imagelogoo"
@@ -92,18 +95,15 @@
             android:layout_marginTop="15dp"
             android:orientation="horizontal"
             android:weightSum="3">
-
-            <TextView
+            <Spinner
                 android:id="@+id/feeddroploc"
                 android:layout_width="360dp"
-                android:text="Drop Location"
-                android:gravity="fill"
-                android:padding="7dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2.5"
-                android:background="@color/editTextBG">
+                android:background="@color/editTextBG"
+                android:spinnerMode="dropdown">
 
-            </TextView>
+            </Spinner>
 
             <ImageView
                 android:id="@+id/imageloo"
@@ -154,7 +154,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="45dp"
             android:background="@drawable/buttonback"
             android:text="submit"
             android:textColor="@color/white"

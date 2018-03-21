@@ -43,16 +43,16 @@ public class Feedback extends AppCompatActivity {
     //    static final int TIME_DIALOG_ID = 1111;
     EditText fName, fcNo;
     TextView pick, drop;
-    TextView picktext, droptext;
-    Spinner pickUpLoc;
-    TextView dropLoc;
+    TextView picktext;
+    TextView pickUpLoc;
+    Spinner dropLoc;
     Button submit;
     Toolbar toolbar;
     String format;
     Calendar calendar;
     TimePickerDialog timepickerdialog;
     String[] pickupareas = {"PickUp Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
-    //    String[] dropareas = {"drop Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
+      String[] dropareas = {"drop Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
     private int CalendarHour, CalendarMinute;
 
     @Override
@@ -67,8 +67,8 @@ public class Feedback extends AppCompatActivity {
 
         fName = (EditText) findViewById(R.id.feedname);
         fcNo = (EditText) findViewById(R.id.feedno);
-        pickUpLoc = (Spinner) findViewById(R.id.feedpickuploc);
-        dropLoc = (TextView) findViewById(R.id.feeddroploc);
+        pickUpLoc = (TextView) findViewById(R.id.feedpickuploc);
+        dropLoc = (Spinner) findViewById(R.id.feeddroploc);
         pick = (TextView) findViewById(R.id.feedpick);
 
         submit = (Button) findViewById(R.id.feedsubmit);
@@ -77,7 +77,7 @@ public class Feedback extends AppCompatActivity {
 
         isPermissionGranted();
 
-        setPickupSpinner();
+        setDropSpinner();
 
         if (isNetworkAvailable()) {
             submit.setOnClickListener(new View.OnClickListener() {
@@ -102,22 +102,13 @@ public class Feedback extends AppCompatActivity {
         });
 
 
-        droptext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                dropmethod();
-            }
-        });
-
-
-        pickUpLoc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        dropLoc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
 
-                ((TextView) adapterView.getChildAt(i)).setTextColor(Color.WHITE);
-                ((TextView) adapterView.getChildAt(i)).setTextSize(14);
+//                ((TextView) adapterView.getChildAt(i)).setTextColor(Color.WHITE);
+//                ((TextView) adapterView.getChildAt(i)).setTextSize(14);
 
             }
 
@@ -129,11 +120,11 @@ public class Feedback extends AppCompatActivity {
     }
 
 
-    private void setPickupSpinner() {
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, pickupareas);
+    private void setDropSpinner() {
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, dropareas);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        pickUpLoc.setPrompt("Select pickUp Location");
-        pickUpLoc.setAdapter(adapter);
+        dropLoc.setPrompt("Select Drop Location");
+        dropLoc.setAdapter(adapter);
     }
 
 
@@ -170,7 +161,7 @@ public class Feedback extends AppCompatActivity {
                         }
 
 
-                        droptext.setText(hourOfDay + ":" + minute + format);
+
                     }
                 }, CalendarHour, CalendarMinute, false);
         timepickerdialog.show();
@@ -236,22 +227,22 @@ public class Feedback extends AppCompatActivity {
 
         final String feedname = fName.getText().toString();
         final String feedfcno = fcNo.getText().toString();
-        final String pickfeed = pickUpLoc.getSelectedItem().toString();
-        final String dropfeed = dropLoc.getText().toString();
-        final String feedteextt = droptext.getText().toString();
+        final String pickfeed = pickUpLoc.getText().toString();
+        final String dropfeed = dropLoc.getSelectedItem().toString();
+
         final String feedpitext = picktext.getText().toString();
 
 
-        if (feedname.isEmpty() || feedfcno.isEmpty() || pickfeed.isEmpty() || dropfeed.isEmpty() || feedteextt.isEmpty() || feedpitext.isEmpty()) {
+        if (feedname.isEmpty() || feedfcno.isEmpty() || pickfeed.isEmpty() || dropfeed.isEmpty() ||  feedpitext.isEmpty()) {
             Toast.makeText(Feedback.this, "please fill all details", Toast.LENGTH_SHORT).show();
         }
 
 
         Log.e("TAG", "" + fName.getText().toString());
         Log.e("TAG", "" + fcNo.getText().toString());
-        Log.e("TAG", "" + pickUpLoc.getSelectedItem().toString());
-        Log.e("TAG", "" + dropLoc.getText().toString());
-        Log.e("TAG", "" + droptext.getText().toString());
+        Log.e("TAG", "" + pickUpLoc.getText().toString());
+        Log.e("TAG", "" + dropLoc.getSelectedItem().toString());
+
         Log.e("TAG", "" + picktext.getText().toString());
         final String valid = "success";
 
@@ -266,10 +257,10 @@ public class Feedback extends AppCompatActivity {
                 Toast.makeText(Feedback.this, "thanks for your feedback", Toast.LENGTH_SHORT).show();
                 fName.setText("");
                 fcNo.setText("");
-                droptext.setText("Drop time");
+
                 picktext.setText("Pickup time");
-                pickUpLoc.setSelection(0);
-                dropLoc.setText("Drop Location");
+               dropLoc.setSelection(0);
+
 
 
             }
@@ -285,9 +276,9 @@ public class Feedback extends AppCompatActivity {
                 Map map = new HashMap();
                 map.put("name", fName.getText().toString());
                 map.put("contactNo", fcNo.getText().toString());
-                map.put("pickup", pickUpLoc.getSelectedItem().toString());
-                map.put("drop", dropLoc.getText().toString());
-                map.put("dropTime", droptext.getText().toString());
+                map.put("pickup", pickUpLoc.getText().toString());
+                map.put("drop", dropLoc.getSelectedItem().toString());
+
                 map.put("pickTime", picktext.getText().toString());
                 return map;
             }
