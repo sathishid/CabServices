@@ -70,10 +70,10 @@ public class Feedback extends AppCompatActivity {
         pickUpLoc = (Spinner) findViewById(R.id.feedpickuploc);
         dropLoc = (TextView) findViewById(R.id.feeddroploc);
         pick = (TextView) findViewById(R.id.feedpick);
-        drop = (TextView) findViewById(R.id.feeddrop);
+
         submit = (Button) findViewById(R.id.feedsubmit);
         picktext = (TextView) findViewById(R.id.textpick);
-        droptext = (TextView) findViewById(R.id.textdrop);
+
 
         isPermissionGranted();
 
