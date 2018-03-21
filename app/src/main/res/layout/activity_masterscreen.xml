@@ -21,7 +21,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/aragreen4"
+                android:background="@color/aragreen2"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
         </FrameLayout>
@@ -38,126 +38,141 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp">
 
-
-
                 <RelativeLayout
-                    android:id="@+id/group"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/listshape1"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:background="@drawable/listshape"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="75dp"
-                    android:src="@drawable/paytm"
-                    android:id="@+id/paytm"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_height="75dp" />
-                <ImageView
-                    android:layout_width="75dp"
-                    android:src="@drawable/wallet"
-                    android:layout_marginLeft="80dp"
-                    android:id="@+id/wallet"
-                    android:layout_marginTop="40dp"
-                    android:layout_toRightOf="@+id/paytm"
-                    android:layout_height="75dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment method"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"/>
 
-                <LinearLayout
-                    android:id="@+id/loj"
-                    android:layout_marginTop="40dp"
-                    android:layout_below="@id/paytm"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/visa"
-                    android:layout_marginLeft="65dp"
-                    android:id="@+id/visa"/>
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_marginLeft="85dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/mas"
-                    android:id="@+id/mastercard"/>
+                    <ImageView
+                        android:id="@+id/paytm"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="65dp"
+                        android:src="@drawable/paytm" />
 
-                </LinearLayout>
+                    <ImageView
+                        android:id="@+id/wallet"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="65dp"
+                        android:layout_toRightOf="@+id/paytm"
+                        android:src="@drawable/wallet" />
+
+                    <LinearLayout
+                        android:id="@+id/loj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/paytm"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/visa"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="65dp"
+                            android:src="@drawable/visa" />
+
+                        <ImageView
+                            android:id="@+id/mastercard"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="85dp"
+                            android:src="@drawable/mas" />
+
+                    </LinearLayout>
 
 
-                <ImageView
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="1"
-                    android:layout_marginTop="30dp"
-                    android:layout_below="@+id/loj"
-                    android:layout_width="75dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginRight="5dp"
-                    android:src="@drawable/qbe"
-                    android:layout_height="75dp"
-                    android:id="@+id/sodexo"/>
+                    <ImageView
+                        android:id="@+id/sodexo"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_below="@+id/loj"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/sodex" />
 
                 </RelativeLayout>
 
-
                 <LinearLayout
                     android:id="@+id/a"
-                    android:weightSum="2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="70dp"
                     android:layout_alignParentBottom="true"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="70dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
                     <LinearLayout
                         android:id="@+id/b"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:background="@drawable/listshape"
+                        android:layout_width="30dp"
+                        android:layout_height="120dp"
                         android:layout_marginLeft="55dp"
                         android:layout_marginRight="55dp"
-                        android:layout_width="30dp"
-                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:background="@color/aragreen"
+                        android:gravity="center"
                         android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="75dp"
-                            android:src="@drawable/fdsf"
-                            android:layout_height="75dp" />
+                            android:layout_height="75dp"
+                            android:src="@drawable/fdsf" />
+
                         <TextView
                             android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:textColor="@color/arablue"
-                            android:textStyle="bold"
-                            android:textSize="22sp"
                             android:layout_height="wrap_content"
-                            android:text="feedback"/>
+                            android:gravity="center"
+                            android:text="feedback"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:background="@drawable/listshape"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="45dp"
                         android:id="@+id/c"
-                        android:gravity="center"
-                        android:layout_gravity="center"
                         android:layout_width="30dp"
                         android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="45dp"
+                        android:layout_weight="1"
+                        android:background="@color/aragreen"
+                        android:gravity="center"
                         android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="75dp"
-                            android:src="@drawable/dkjf"
-                            android:layout_height="75dp" />
+                            android:layout_height="75dp"
+                            android:src="@drawable/dkjf" />
+
                         <TextView
-                            android:gravity="center"
-                            android:textColor="@color/arablue"
-                            android:textStyle="bold"
-                            android:textSize="22sp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Route"/>
+                            android:gravity="center"
+                            android:text="Route"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </LinearLayout>

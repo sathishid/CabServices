@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,7 +20,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/aragreen4"
+            android:background="@color/aragreen2"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     </FrameLayout>
@@ -33,8 +35,8 @@
 
             <ImageView
                 android:id="@+id/signuplogo"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:src="@drawable/usercreated" />
@@ -44,74 +46,73 @@
                 android:id="@+id/signuser"
                 android:padding="10dp"
                 android:layout_marginTop="35dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:textSize="15sp"
-                android:textColor="@color/aragray"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textColorHint="@color/aragray"
-                android:layout_marginRight="10dp"
+                android:textColorHint="@color/white"
+
                 android:hint="Username"
-                android:background="@color/white"
+                android:background="@drawable/edittext"
                 android:layout_height="wrap_content" />
             <EditText
                 android:layout_width="match_parent"
                 android:hint="Phone number"
                 android:id="@+id/signphone"
                 android:textSize="15sp"
-                android:textColorHint="@color/aragray"
+                android:textColorHint="@color/white"
                 android:padding="10dp"
-                android:textColor="@color/aragray"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext"
                 android:layout_height="wrap_content" />
             <EditText
                 android:hint="Password"
                 android:layout_width="match_parent"
                 android:textSize="15sp"
                 android:id="@+id/signpass"
-                android:textColor="@color/aragray"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:padding="10dp"
                 android:inputType="textPassword"
-                android:textColorHint="@color/aragray"
+                android:textColorHint="@color/white"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext"
                 android:layout_height="wrap_content" />
             <EditText
                 android:hint="Conform Password"
                 android:layout_width="match_parent"
                 android:id="@+id/signconpass"
                 android:inputType="textPassword"
-                android:textColorHint="@color/aragray"
-                android:textColor="@color/aragray"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:padding="10dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext"
                 android:layout_height="wrap_content" />
 
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:textSize="15sp"
                 android:layout_marginTop="60dp"
                 android:layout_gravity="center"
                 android:text="create new account"
                 android:padding="6dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:ems="18"
                 android:id="@+id/create"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/buttonback"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>

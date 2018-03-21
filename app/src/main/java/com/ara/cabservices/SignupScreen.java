@@ -44,7 +44,6 @@ public class SignupScreen extends AppCompatActivity {
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
 
         createNew = (Button) findViewById(R.id.create);
-
         signUser = (EditText) findViewById(R.id.signuser);
         signphone = (EditText) findViewById(R.id.signphone);
         signpass = (EditText) findViewById(R.id.signpass);
@@ -85,7 +84,9 @@ public class SignupScreen extends AppCompatActivity {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
+
                     Log.e("response", "" + response);
+
                     Toast.makeText(SignupScreen.this, "user added", Toast.LENGTH_SHORT).show();
                     signUser.setText("");
                     signpass.setText("");

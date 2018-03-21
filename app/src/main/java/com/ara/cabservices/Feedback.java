@@ -6,6 +6,7 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
@@ -36,13 +37,13 @@ import java.sql.Time;
 import java.util.*;
 import java.util.Map;
 
-public class Feedback extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Feedback extends AppCompatActivity {
 
 
     //    static final int TIME_DIALOG_ID = 1111;
-    EditText fName, fcNo, cost;
+    EditText fName, fcNo;
     TextView pick, drop;
-    TextView picktext,droptext;
+    TextView picktext, droptext;
     Spinner pickUpLoc;
     TextView dropLoc;
     Button submit;
@@ -50,8 +51,8 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
     String format;
     Calendar calendar;
     TimePickerDialog timepickerdialog;
-    String[] pickupareas = {"PickUp Location",  "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
-//    String[] dropareas = {"drop Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
+    String[] pickupareas = {"PickUp Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
+    //    String[] dropareas = {"drop Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
     private int CalendarHour, CalendarMinute;
 
     @Override
@@ -68,7 +69,6 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
         fcNo = (EditText) findViewById(R.id.feedno);
         pickUpLoc = (Spinner) findViewById(R.id.feedpickuploc);
         dropLoc = (TextView) findViewById(R.id.feeddroploc);
-        cost = (EditText) findViewById(R.id.feedcost);
         pick = (TextView) findViewById(R.id.feedpick);
         drop = (TextView) findViewById(R.id.feeddrop);
         submit = (Button) findViewById(R.id.feedsubmit);
@@ -79,14 +79,13 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
 
         setPickupSpinner();
 
-
         if (isNetworkAvailable()) {
             submit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
 
-                submit();
+                    submit();
                 }
             });
         } else {
@@ -111,14 +110,31 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
             }
         });
 
+
+        pickUpLoc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+
+                ((TextView) adapterView.getChildAt(i)).setTextColor(Color.WHITE);
+                ((TextView) adapterView.getChildAt(i)).setTextSize(14);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
+
+
     private void setPickupSpinner() {
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, pickupareas);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         pickUpLoc.setPrompt("Select pickUp Location");
         pickUpLoc.setAdapter(adapter);
     }
-
 
 
     private void dropmethod() {
@@ -218,71 +234,65 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
         feedbackModel.setDropTime(droptext.getText().toString());
         feedbackModel.setPickTime(picktext.getText().toString());*/
 
-        final String feedname =fName.getText().toString();
-        final  String feedcost = cost.getText().toString();
-        final  String feedfcno = fcNo.getText().toString();
-        final  String pickfeed = pickUpLoc.getSelectedItem().toString();
-        final  String dropfeed = dropLoc.getText().toString();
-        final  String feedteextt = droptext.getText().toString();
-        final  String feedpitext = picktext.getText().toString();
+        final String feedname = fName.getText().toString();
+        final String feedfcno = fcNo.getText().toString();
+        final String pickfeed = pickUpLoc.getSelectedItem().toString();
+        final String dropfeed = dropLoc.getText().toString();
+        final String feedteextt = droptext.getText().toString();
+        final String feedpitext = picktext.getText().toString();
 
 
-        if (feedname.isEmpty() || feedcost.isEmpty()||feedfcno.isEmpty()||pickfeed.isEmpty()||dropfeed.isEmpty()||feedteextt.isEmpty()||feedpitext.isEmpty()) {
+        if (feedname.isEmpty() || feedfcno.isEmpty() || pickfeed.isEmpty() || dropfeed.isEmpty() || feedteextt.isEmpty() || feedpitext.isEmpty()) {
             Toast.makeText(Feedback.this, "please fill all details", Toast.LENGTH_SHORT).show();
         }
-/*
 
 
         Log.e("TAG", "" + fName.getText().toString());
         Log.e("TAG", "" + fcNo.getText().toString());
-        Log.e("TAG",""+pickUpLoc.getSelectedItem().toString());
-        Log.e("TAG",""+dropLoc.getSelectedItem().toString());
+        Log.e("TAG", "" + pickUpLoc.getSelectedItem().toString());
+        Log.e("TAG", "" + dropLoc.getText().toString());
         Log.e("TAG", "" + droptext.getText().toString());
         Log.e("TAG", "" + picktext.getText().toString());
-        Log.e("TAG", "" + cost.getText().toString());
         final String valid = "success";
-*/
 
 //        Log.e("TAG", "feedbackModel-" + feedbackModel);
-            String url = "http://arasoftwares.in/cabservice-app/android_atncfile.php?action=save";
+        String url = "http://arasoftwares.in/cabservice-app/android_atncfile.php?action=save";
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    Log.e("response", "" + response);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.e("response", "" + response);
 
-                        Toast.makeText(Feedback.this, "thanks for your feedback", Toast.LENGTH_SHORT).show();
-                        fName.setText("");
-                        fcNo.setText("");
-                        droptext.setText("Drop time");
-                        picktext.setText("Pickup time");
-                        cost.setText("");
-                        pickUpLoc.setSelection(0);
-                        dropLoc.setText("");
+                Toast.makeText(Feedback.this, "thanks for your feedback", Toast.LENGTH_SHORT).show();
+                fName.setText("");
+                fcNo.setText("");
+                droptext.setText("Drop time");
+                picktext.setText("Pickup time");
+                pickUpLoc.setSelection(0);
+                dropLoc.setText("Drop Location");
 
 
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.e("error", "" + error);
-                    Toast.makeText(Feedback.this, error.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }) {
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map map = new HashMap();
-                    map.put("name", fName.getText().toString());
-                    map.put("contactNo", fcNo.getText().toString());
-                    map.put("pickup", pickUpLoc.getSelectedItem().toString());
-                    map.put("drop", dropLoc.getText().toString());
-                    map.put("dropTime", droptext.getText().toString());
-                    map.put("pickTime", picktext.getText().toString());
-                    map.put("cost", cost.getText().toString());
-                    return map;
-                }
-            };
-            MySingleton.getInstance(this).addToRequestQueue(stringRequest);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("error", "" + error);
+                Toast.makeText(Feedback.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map map = new HashMap();
+                map.put("name", fName.getText().toString());
+                map.put("contactNo", fcNo.getText().toString());
+                map.put("pickup", pickUpLoc.getSelectedItem().toString());
+                map.put("drop", dropLoc.getText().toString());
+                map.put("dropTime", droptext.getText().toString());
+                map.put("pickTime", picktext.getText().toString());
+                return map;
+            }
+        };
+        MySingleton.getInstance(this).addToRequestQueue(stringRequest);
 
 
     }
@@ -330,14 +340,4 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
         super.onBackPressed();
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
 }

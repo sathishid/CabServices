@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/aragreen"
     tools:context="com.ara.cabservices.Map">
 
     <FrameLayout
@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/aragreen"
+            android:background="@color/aragreen2"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     </FrameLayout>
@@ -43,7 +43,7 @@
             android:id="@+id/spinner"
             android:layout_weight="2.5"
             android:spinnerMode="dropdown"
-            android:background="@android:color/darker_gray"
+            android:background="@color/editTextBG"
             android:layout_height="match_parent">
 
         </Spinner>

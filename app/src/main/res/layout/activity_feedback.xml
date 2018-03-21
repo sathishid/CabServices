@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/aragreen4"
+            android:background="@color/aragreen2"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     </FrameLayout>
@@ -35,119 +35,108 @@
             android:id="@+id/feedname"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="40dp"
-            android:background="@android:color/darker_gray"
+            android:layout_marginTop="60dp"
+            android:background="@color/editTextBG"
             android:ems="16"
-            android:textColor="@color/white"
             android:hint="Enter your Name"
             android:paddingLeft="10dp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <EditText
-            android:textColor="@color/white"
             android:id="@+id/feedno"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"
+            android:layout_marginTop="15dp"
+            android:background="@color/editTextBG"
             android:ems="16"
             android:hint="Enter your Contact no"
             android:paddingLeft="10dp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="14sp"
             android:textStyle="bold" />
 
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:weightSum="3"
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
             <Spinner
-                android:layout_weight="2.5"
-                android:layout_width="360dp"
                 android:id="@+id/feedpickuploc"
-                android:gravity="center"
-                android:spinnerMode="dropdown"
-                android:background="@android:color/darker_gray"
-                android:layout_height="match_parent">
+                android:layout_width="360dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:background="@color/editTextBG"
+                android:spinnerMode="dropdown">
 
             </Spinner>
+
             <ImageView
-                android:layout_weight="0.5"
+                android:id="@+id/imagelogoo"
                 android:layout_width="50dp"
-                android:background="@android:color/darker_gray"
                 android:layout_height="40dp"
-                android:src="@drawable/iconfor"
-                android:id="@+id/imagelogoo"/>
+                android:layout_weight="0.5"
+                android:background="@android:color/darker_gray"
+                android:src="@drawable/iconfor" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:weightSum="3"
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
             <TextView
-                android:layout_weight="2.5"
-                android:layout_width="360dp"
                 android:id="@+id/feeddroploc"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:text="Ramanujam IT City"
-                android:background="@android:color/darker_gray"
-                android:layout_height="match_parent">
+                android:layout_width="360dp"
+                android:text="Drop Location"
+                android:gravity="fill"
+                android:padding="7dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:background="@color/editTextBG">
 
             </TextView>
-            <ImageView
-                android:layout_weight="0.5"
-                android:layout_width="50dp"
-                android:background="@android:color/darker_gray"
-                android:layout_height="40dp"
-                android:src="@drawable/iconfor"
-                android:id="@+id/imageloo"/>
-        </LinearLayout>
 
-    <!--    <EditText
-            android:textColor="@color/white"
-            android:id="@+id/feedcost"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/aragray"
-            android:gravity="fill"
-            android:hint="Cost Expected"
-            android:paddingLeft="10dp"
-            android:textColorHint="@color/white"
-            android:textSize="14sp"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold" />-->
+            <ImageView
+                android:id="@+id/imageloo"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/darker_gray"
+                android:src="@drawable/iconfor" />
+        </LinearLayout>
 
 
         <LinearLayout
             android:id="@+id/feedbacklayout3"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
 
             <TextView
-                android:textColor="@color/white"
                 android:id="@+id/feedpick"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/clock"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:textColor="@color/white" />
 
 
             <TextView
                 android:id="@+id/textpick"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:background="@color/editTextBG"
                 android:gravity="fill"
                 android:paddingLeft="10dp"
                 android:text="Pickup time"
@@ -157,47 +146,16 @@
 
         </LinearLayout>
 
-       <!-- <LinearLayout
-            android:id="@+id/feedbacklayout4"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-            <TextView
-
-                android:id="@+id/feeddrop"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/clock"
-                android:gravity="center"
-                android:paddingLeft="10dp"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textdrop"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/aragray"
-                android:gravity="fill"
-                android:paddingLeft="10dp"
-                android:text="Drop time"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-        </LinearLayout>-->
 
         <Button
             android:id="@+id/feedsubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@color/colorPrimaryDark"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/buttonback"
             android:text="submit"
             android:textColor="@color/white"
             android:textSize="17sp"
