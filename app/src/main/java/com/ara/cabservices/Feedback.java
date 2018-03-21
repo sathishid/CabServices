@@ -51,8 +51,8 @@ public class Feedback extends AppCompatActivity {
     String format;
     Calendar calendar;
     TimePickerDialog timepickerdialog;
-    String[] pickupareas = {"PickUp Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
-      String[] dropareas = {"drop Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Le Royal Merridien"};
+    String[] pickupareas = {"PickUp Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Alandur"};
+      String[] dropareas = {"drop Location", "Vijaya nagar", "Perungudi", "Tnagar Bus Terminus", "Nandanam", "Mylapore", "Alandur"};
     private int CalendarHour, CalendarMinute;
 
     @Override
