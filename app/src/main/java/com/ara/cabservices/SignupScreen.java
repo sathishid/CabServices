@@ -43,11 +43,11 @@ public class SignupScreen extends AppCompatActivity {
         toolbar.setTitle("Master Screen");
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
 
-        createNew = (Button) findViewById(R.id.create);
-        signUser = (EditText) findViewById(R.id.signuser);
-        signphone = (EditText) findViewById(R.id.signphone);
-        signpass = (EditText) findViewById(R.id.signpass);
-        conpass = (EditText) findViewById(R.id.signconpass);
+        createNew = findViewById(R.id.create);
+        signUser = findViewById(R.id.signuser);
+        signphone = findViewById(R.id.signphone);
+        signpass = findViewById(R.id.signpass);
+        conpass = findViewById(R.id.signconpass);
 
         isPermissionGranted();
         if (isNetworkAvailable()) {

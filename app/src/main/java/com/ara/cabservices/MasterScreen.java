@@ -21,6 +21,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +34,7 @@ public class MasterScreen extends AppCompatActivity {
 
     Toolbar toolbar;
     DrawerLayout dLayout;
-    LinearLayout feedback,route;
+    ImageButton feedback,route;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,14 +44,14 @@ public class MasterScreen extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle("Master Screen");
         toolbar.setTitleTextColor(ContextCompat.getColor(this,R.color.white));
-        feedback = (LinearLayout) findViewById(R.id.b);
-        route = (LinearLayout) findViewById(R.id.c);
-
+        feedback = findViewById(R.id.feedback_button);
+        route = findViewById(R.id.route_button);
 
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
-        dLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        actionbar.setTitle(R.string.Appbar_Title);
+        dLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, dLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         dLayout.setDrawerListener(toggle);
         toggle.syncState();
@@ -76,11 +77,12 @@ public class MasterScreen extends AppCompatActivity {
             }
         });
 
+
     }
 
     private void setNavigationDrawer() {
-        dLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        NavigationView navView = (NavigationView) findViewById(R.id.navigation);
+        dLayout = findViewById(R.id.drawer_layout);
+        NavigationView navView = findViewById(R.id.navigation);
 
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -153,5 +155,7 @@ public class MasterScreen extends AppCompatActivity {
         finish();
         super.onBackPressed();
     }
+
+
 
 }

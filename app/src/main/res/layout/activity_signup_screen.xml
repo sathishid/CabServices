@@ -28,13 +28,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:background="@color/aragreen"
-            android:id="@+id/linear123"
             android:layout_marginTop="55dp"
             android:orientation="vertical"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/signuplogo"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_gravity="center"

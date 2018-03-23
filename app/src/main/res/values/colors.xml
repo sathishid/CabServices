@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6c9ec7</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="background">#ece3e6</color>
-    <color name="araorange">#dccb4d</color>
-    <color name="arablue">#63b9ba</color>
     <color name="aragreen">#d4e157</color>
     <color name="aragreen1">#075e60</color>
     <color name="aragreen2">#3e997f</color>
     <color name="white">#FFFFFF</color>
-    <color name="transparent">#00000000</color>
     <color name="editTextBG">#878787</color>z
-    <color name="textColor">#6e6e6e</color>
-    <color name="aragray">#454444</color>
 </resources>

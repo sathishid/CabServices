@@ -42,10 +42,10 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        userName = (EditText) findViewById(R.id.user);
-        passWord = (EditText) findViewById(R.id.pass);
-        login = (Button) findViewById(R.id.login);
-        signUp = (TextView) findViewById(R.id.signup);
+        userName = findViewById(R.id.user);
+        passWord = findViewById(R.id.pass);
+        login = findViewById(R.id.login);
+        signUp = findViewById(R.id.signup);
 
 
         isPermissionGranted();

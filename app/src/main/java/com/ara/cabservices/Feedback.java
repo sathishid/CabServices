@@ -65,14 +65,14 @@ public class Feedback extends AppCompatActivity {
         toolbar.setTitle("Master Screen");
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
 
-        fName = (EditText) findViewById(R.id.feedname);
-        fcNo = (EditText) findViewById(R.id.feedno);
-        pickUpLoc = (TextView) findViewById(R.id.feedpickuploc);
-        dropLoc = (Spinner) findViewById(R.id.feeddroploc);
-        pick = (TextView) findViewById(R.id.feedpick);
+        fName = findViewById(R.id.feedname);
+        fcNo = findViewById(R.id.feedno);
+        pickUpLoc = findViewById(R.id.feedpickuploc);
+        dropLoc = findViewById(R.id.feeddroploc);
+        pick = findViewById(R.id.feedpick);
 
-        submit = (Button) findViewById(R.id.feedsubmit);
-        picktext = (TextView) findViewById(R.id.textpick);
+        submit = findViewById(R.id.feedsubmit);
+        picktext = findViewById(R.id.textpick);
 
 
         isPermissionGranted();

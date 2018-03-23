@@ -23,7 +23,6 @@
 
 
     <LinearLayout
-        android:id="@+id/feedbacklayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/content_frame"
@@ -81,7 +80,6 @@
             </TextView>
 
             <ImageView
-                android:id="@+id/imagelogoo"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
                 android:layout_weight="0.5"
@@ -106,7 +104,6 @@
             </Spinner>
 
             <ImageView
-                android:id="@+id/imageloo"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
                 android:layout_weight="0.5"
@@ -116,7 +113,6 @@
 
 
         <LinearLayout
-            android:id="@+id/feedbacklayout3"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="15dp"

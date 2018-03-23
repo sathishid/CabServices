@@ -22,7 +22,6 @@
     </FrameLayout>
 
     <RelativeLayout
-        android:id="@+id/mapRelative"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="55dp">
@@ -52,8 +51,7 @@
             android:layout_width="50dp"
             android:background="@android:color/darker_gray"
             android:layout_height="50dp"
-            android:src="@drawable/iconfor"
-            android:id="@+id/imagelogoo"/>
+            android:src="@drawable/iconfor" />
         </LinearLayout>
         <ImageView
             android:id="@+id/imageRoute"

@@ -34,8 +34,8 @@ public class Map extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle("Master Screen");
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
-        spinner = (Spinner) findViewById(R.id.spinner);
-        route = (ImageView) findViewById(R.id.imageRoute);
+        spinner = findViewById(R.id.spinner);
+        route = findViewById(R.id.imageRoute);
 
         isPermissionGranted();
         if (isNetworkAvailable()) {
