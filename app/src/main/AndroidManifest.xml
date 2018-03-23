@@ -33,12 +33,12 @@
         <activity
             android:name=".Map"
             android:label="Map"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".SignupScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".SignupScreen"
             android:label="Signup Screen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".PaymentOptionActivity"></activity>
     </application>
 
 </manifest>

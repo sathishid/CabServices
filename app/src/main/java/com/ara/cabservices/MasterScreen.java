@@ -157,5 +157,7 @@ public class MasterScreen extends AppCompatActivity {
     }
 
 
-
+    public void startPaymentOption(View view) {
+        startActivity(new Intent(MasterScreen.this,PaymentOptionActivity.class));
+    }
 }

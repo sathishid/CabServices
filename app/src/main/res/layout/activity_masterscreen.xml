@@ -48,12 +48,10 @@
                     android:layout_marginRight="30dp"
                     android:src="@drawable/spt" />
 
-                <android.support.v7.view.menu.ExpandedMenuView
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
-
-                </android.support.v7.view.menu.ExpandedMenuView>
-
+                    android:layout_height="80dp"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -63,11 +61,10 @@
                     android:textSize="40sp"
                     android:textStyle="bold" />
 
-                <android.support.v7.view.menu.ExpandedMenuView
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
-
-                </android.support.v7.view.menu.ExpandedMenuView>
+                    android:layout_height="85dp"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -155,7 +152,8 @@
         android:src="@drawable/payment"
         android:stateListAnimator="@animator/anim"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="startPaymentOption"/>
 
 </android.support.constraint.ConstraintLayout>
 

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aragreen"
+    tools:context="com.ara.cabservices.MasterScreen">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/aragreen2"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp">
+
+            <LinearLayout
+                android:id="@+id/logo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/spt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/logo_layout"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_gravity="center"
+                   >
+
+                   <ImageView
+                       android:layout_width="118dp"
+                       android:layout_height="84dp"
+
+                       android:src="@drawable/master_logo" />
+
+
+                   <ImageView
+                       android:layout_width="118dp"
+                       android:layout_height="84dp"
+                       android:layout_marginLeft="25dp"
+                       android:layout_marginRight="15dp"
+                       android:src="@drawable/imps_logo" />
+
+                   <ImageView
+                       android:layout_width="118dp"
+                       android:layout_height="84dp"
+                       android:src="@drawable/neft_logo" />
+               </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="118dp"
+                        android:layout_height="84dp"
+
+                        android:src="@drawable/wallet_logo" />
+
+
+                    <ImageView
+                        android:layout_width="118dp"
+                        android:layout_height="84dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/visa_logo" />
+
+                    <ImageView
+                        android:layout_width="118dp"
+                        android:layout_height="84dp"
+                        android:src="@drawable/paytm_logo" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
